@@ -1,0 +1,7 @@
+# Block crawlers from CMS
+User-agent: *
+Disallow: /admin
+
+# Allow all crawlers
+User-agent: *
+Allow: /
