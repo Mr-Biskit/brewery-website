@@ -1,30 +1,6 @@
 import React from "react";
 import { HeartIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
-import CoreStyles from "react-awesome-slider/src/core/styles.scss";
-import AnimationStyles from "react-awesome-slider/src/styled/scale-out-animation/scale-out-animation.scss";
-
-const AutoplaySlider = withAutoplay(AwesomeSlider);
-
-const slider = (
-  <AutoplaySlider
-    play={true}
-    cancelOnInteraction={false} // should stop playing on user interaction
-    interval={5000}
-    bullets={false}
-    organicArrows={false}
-    fillParent={true}
-    animation="scaleOutAnimation"
-    cssModule={[CoreStyles, AnimationStyles]}
-  >
-    <div data-src="/Sport/f1.jpeg" />
-    <div data-src="/Sport/rugby.jpeg" />
-    <div data-src="/Sport/soccer.jpeg" />
-  </AutoplaySlider>
-);
 
 function Sports() {
   return (
@@ -45,9 +21,7 @@ function Sports() {
           and we always show the games. Come here to enjoy a delicious meal and
           a hand-crafted beer while watching the action.
         </p>
-        <div className="flex flex-col justify-center items-center relative w-[300px] my-2 border-2 rounded-lg border-white mx-3 h-[200px] object-fill">
-          {slider}
-        </div>
+        <div className="flex flex-col justify-center items-center relative w-[300px] my-2 border-2 rounded-lg border-white mx-3 h-[200px] object-fill"></div>
         <p className="text-white text-sm mx-4 my-3 font-std">
           Give us a call to see if we can show your game. We're passionate about
           sports and we're always excited to share the experience with our

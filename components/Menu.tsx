@@ -7,7 +7,7 @@ function Menu() {
     <div className="w-screen flex flex-col my-16 justify-center items-center bg-black">
       <h1 className="text-6xl text-white my-2 mx-2 mb-10 font-heading">MeNu</h1>
 
-      <Link href="/food" target={"_blank"} rel="noopener noreferrer">
+      <Link href="/food">
         <div className="justify-center items-center flex  w-screen relative z-10">
           <Image
             src="/images/food1.jpeg"

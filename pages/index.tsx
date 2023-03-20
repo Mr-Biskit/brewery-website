@@ -9,8 +9,9 @@ import Sports from "@/components/Sports";
 
 // Fetching Sanity Data
 import { GetStaticProps } from "next";
-import { ImageDivider } from "@/lib/types";
+import { ImageDivider, MenuCategory } from "@/lib/types";
 import { getImageDividers } from "@/lib/fetchData";
+import { urlFor } from "@/lib/sanityClient";
 
 type HomeProps = {
   imageDividers: ImageDivider[];
@@ -25,14 +26,14 @@ const Home: React.FC<HomeProps> = ({ imageDividers }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-black">
+      <main className="bg-black w-full">
         <section id="Home">
           <Hero />
         </section>
         <Image
           className="lg:w-screen lg:h-[200px] w-screen "
           alt="section 1"
-          src="/images/beer4.jpeg"
+          src={urlFor(imageDividers[0].image).url()!}
           width={300}
           height={300}
         />
@@ -43,7 +44,7 @@ const Home: React.FC<HomeProps> = ({ imageDividers }) => {
         <Image
           className="lg:w-screen lg:h-[200px] w-screen "
           alt="section 2"
-          src="/images/beer5.jpeg"
+          src={urlFor(imageDividers[1].image).url()!}
           width={300}
           height={300}
         />
@@ -59,7 +60,7 @@ const Home: React.FC<HomeProps> = ({ imageDividers }) => {
         <Image
           className="lg:w-screen lg:h-[200px] w-screen "
           alt="section 2"
-          src="/images/emptyPlace.jpeg"
+          src={urlFor(imageDividers[2].image).url()!}
           width={300}
           height={300}
         />

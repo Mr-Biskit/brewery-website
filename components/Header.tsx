@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Sling as Hamburger } from "hamburger-react";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 function Header() {
   const [isOpen, setOpen] = useState(false);
@@ -21,6 +21,7 @@ function Header() {
               src="/images/logoName.png"
               width={150}
               height={200}
+              className=""
             />
           </Link>
         </div>
