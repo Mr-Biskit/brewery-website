@@ -12,7 +12,7 @@ function Header() {
   }
 
   return (
-    <header className="w-screen  bg-black sticky top-0 z-50">
+    <header className="w-screen  bg-black sticky top-0 z-30 ">
       <div className="flex justify-between">
         <div className="mx-2 mt-4 p-2">
           <Link href={"/"}>
@@ -36,7 +36,7 @@ function Header() {
         </div>
       </div>
       {isOpen && (
-        <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black via-primary to-secondary w-screen h-screen relative z-20 ">
+        <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black via-primary to-secondary w-screen h-[844px] relative z-20 ">
           <Link href={"#OurStory"} onClick={handleLinkClick}>
             <h3 className="text-[#f2f2f2] font-std font-normal tracking-wider text-xl mt-2 ">
               OUR STORY

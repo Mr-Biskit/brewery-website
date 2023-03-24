@@ -77,3 +77,15 @@ export interface Sports {
   date: string;
   image: any; // Replace with the specific type for your image, if needed
 }
+
+export interface Beer extends Base {
+  alcoholVolume: string;
+  bitterness: string;
+  description: string;
+  hops: string[];
+  image: Image;
+  malts: string[];
+  secondImage: Image;
+  title: string;
+  type: string;
+}

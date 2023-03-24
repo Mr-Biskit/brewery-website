@@ -1,5 +1,5 @@
 import sanityClient from "./sanityClient";
-import { ImageDivider, MenuCategory } from "./types";
+import { ImageDivider, MenuCategory, Beer } from "./types";
 
 export async function getImageDividers(): Promise<ImageDivider[]> {
   const query = `*[_type == "imageDivider"]`;
@@ -11,4 +11,10 @@ export async function getMenuCategory(): Promise<MenuCategory[]> {
   const query = `*[_type == "menuCategory"]`;
   const menuCategory = await sanityClient.fetch(query);
   return menuCategory;
+}
+
+export async function getBeer(): Promise<Beer[]> {
+  const query = `*[_type == "beer"]`;
+  const beer = await sanityClient.fetch(query);
+  return beer;
 }
