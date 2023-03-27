@@ -23,5 +23,24 @@
     font-weight: 500;
   }
 
-  
+  .image-with-shadow {
+    position: relative;
+  }
+
+  .image-with-shadow:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(15, 15, 17, 0.5);
+    z-index: 1;
+  }
+
+  @screen md {
+    .md-pre-wrap {
+      white-space: pre-wrap;
+    }
+  }
 }

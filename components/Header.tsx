@@ -12,7 +12,7 @@ function Header() {
   }
 
   return (
-    <header className="w-screen  bg-black sticky top-0 z-30 ">
+    <header className="w-full  bg-black sticky top-0 z-30 ">
       <div className="flex justify-between">
         <div className="mx-2 mt-4 p-2">
           <Link href={"/"}>
