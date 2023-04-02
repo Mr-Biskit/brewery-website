@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         std: ["Base"],
         heading: ["Pine", "sans-serif"],
-        rooster: ["Rooster", "sans-serif"],
+        bebas: ["Bebas Neue", "cursive"],
       },
       backgroundImage: {
         "hero-pattern": "url('../public/images/food1.jpeg')",
@@ -21,6 +21,7 @@ module.exports = {
         secondary: "#2d2d2d",
         text: "#F5F5F5",
         light: "#f2f2f2",
+        yellow: "#ffc700",
       },
     },
   },

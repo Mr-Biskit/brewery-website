@@ -12,15 +12,15 @@ type BeerCardProps = {
 
 const BeerCard: React.FC<BeerCardProps> = React.memo(
   ({ beer, onBeerSelect, index }) => {
-    const isMdScreen = useMediaQuery({ minWidth: 768 });
+    const islgScreen = useMediaQuery({ minWidth: 1024 });
     const showSvg = index % 3 !== 2;
     return (
       <div
-        className="w-auto h-full flex justify-center items-center p-4 mx-2 transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300 md:h-full "
+        className="w-auto h-full flex justify-center items-center p-4 mx-2 space-x-5 transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300 lg:h-full "
         onClick={() => onBeerSelect(beer)}
       >
-        <div className="w-1/3 justify-center items-center md:w-1/4">
-          {!isMdScreen && (
+        <div className="w-1/3 justify-center items-center lg:w-1/4 xl:w-1/5">
+          {!islgScreen && (
             <svg
               width="17"
               height="43"
@@ -33,7 +33,7 @@ const BeerCard: React.FC<BeerCardProps> = React.memo(
               <line y1="42.5" x2="16.0312" y2="42.5" stroke="#725110" />
             </svg>
           )}
-          {isMdScreen && (
+          {islgScreen && (
             <svg
               width="16"
               height="81"
@@ -66,16 +66,16 @@ const BeerCard: React.FC<BeerCardProps> = React.memo(
             </svg>
           )}
         </div>
-        <div className="w-2/3 h-full flex flex-col justify-center items-center space-y-2  md:w-3/4">
-          <div className="w-[44px] h-[86px] relative">
+        <div className="w-2/3 h-full flex flex-col justify-center items-center space-y-2  lg:w-3/4 lg:space-y-3">
+          <div className="w-[44px] h-[86px] relative xl:w-[60px] xl:h-[126px]">
             <Image alt="beerPic" src={urlFor(beer.image).url()!} fill />
           </div>
-          <h1 className="text-white font-std text-[11px] text-center w-[67px] h-[19px]">
+          <h1 className="text-white font-std text-[11px] text-center w-[67px] h-[19px] xl:text-xl lg:h-auto lg:w-auto ">
             {beer.title}
           </h1>
         </div>
         {showSvg && (
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <svg
               width="2"
               height="110"

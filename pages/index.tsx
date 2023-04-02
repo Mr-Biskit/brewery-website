@@ -7,11 +7,16 @@ import OurStory from "@/components/OurStory";
 import Menu from "@/components/Menu";
 import Sports from "@/components/Sports";
 
+import { Parallax } from "react-parallax";
+
 // Fetching Sanity Data
 import { GetStaticProps } from "next";
 import { ImageDivider, MenuCategory } from "@/lib/types";
 import { getImageDividers } from "@/lib/fetchData";
 import { urlFor } from "@/lib/sanityClient";
+import Gallery from "@/components/Gallery";
+import Events from "@/components/Events";
+import Contact from "@/components/Contact";
 
 type HomeProps = {
   imageDividers: ImageDivider[];
@@ -26,47 +31,120 @@ const Home: React.FC<HomeProps> = ({ imageDividers }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-black w-full">
+      <main className="bg-[#070D0D] w-full">
         <section id="Home">
           <Hero />
         </section>
-        <Image
-          className="lg:w-screen lg:h-[200px] w-screen "
-          alt="section 1"
-          src={urlFor(imageDividers[0].image).url()!}
-          width={300}
-          height={300}
-        />
+
+        <Parallax
+          bgImage={urlFor(imageDividers[0].image).url()!}
+          strength={150}
+          style={{
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "auto 100%",
+          }}
+        >
+          <div className="w-screen h-[400px] lg:h-screen " />
+        </Parallax>
+
         <section id="OurStory">
           <div className="w-screen h-[96px]" />
           <OurStory />
         </section>
-        <Image
-          className="lg:w-screen lg:h-[200px] w-screen "
-          alt="section 2"
-          src={urlFor(imageDividers[1].image).url()!}
-          width={300}
-          height={300}
-        />
+        <Parallax
+          bgImage={urlFor(imageDividers[1].image).url()!}
+          strength={200}
+          style={{
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+            width: "100%",
+          }}
+        >
+          <div className="w-screen h-[500px] lg:h-screen relative" />
+        </Parallax>
+
         <section id="Menu">
           <div className="w-screen h-[96px]" />
           <Menu />
         </section>
-        <Link href={"/"}>
-          <div className="flex justify-center items-center text-white bg-black/60 rounded-md font-heading text-3xl lg:text-xl tracker-wide text-center p-3 border mx-4 border-white hover:bg-black/80 mb-16">
-            Book a Table
-          </div>
-        </Link>
-        <Image
-          className="lg:w-screen lg:h-[200px] w-screen "
-          alt="section 2"
-          src={urlFor(imageDividers[2].image).url()!}
-          width={300}
-          height={300}
-        />
+        <div className="justify-center items-center flex">
+          <Link href={"/"} className="justify-center items-center">
+            <div className="custom-button mx-4  mb-16 lg:border-4">
+              <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl">
+                Book a Table
+              </h1>
+            </div>
+          </Link>
+        </div>
+
+        <Parallax
+          bgImage={urlFor(imageDividers[2].image).url()!}
+          strength={250}
+          style={{
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+          }}
+        >
+          <div className="w-screen h-[500px] lg:h-screen relative" />
+        </Parallax>
+
         <section id="Sports">
           <div className="w-screen h-[96px]" />
           <Sports />
+        </section>
+
+        <Parallax
+          bgImage={urlFor(imageDividers[3].image).url()!}
+          strength={300}
+          style={{
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+          }}
+        >
+          <div className="w-screen h-[500px] lg:h-screen relative" />
+        </Parallax>
+
+        <section id="Gallery">
+          <div className="w-screen h-[96px]" />
+          <Gallery />
+        </section>
+
+        <Parallax
+          bgImage={urlFor(imageDividers[4].image).url()!}
+          strength={350}
+          style={{
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+          }}
+        >
+          <div className="w-screen h-[500px] lg:h-screen relative" />
+        </Parallax>
+
+        <section id="Events">
+          <div className="w-screen h-[96px]" />
+          <Events />
+        </section>
+
+        <Parallax
+          bgImage={urlFor(imageDividers[0].image).url()!}
+          strength={150}
+          style={{
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100% auto",
+          }}
+        >
+          <div className="w-screen h-[400px] lg:h-screen relative" />
+        </Parallax>
+
+        <section id="Contact">
+          <div className="w-screen h-[96px]" />
+          <Contact />
         </section>
       </main>
     </>

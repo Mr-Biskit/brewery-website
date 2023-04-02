@@ -38,9 +38,29 @@
     z-index: 1;
   }
 
-  @screen md {
-    .md-pre-wrap {
+  @screen lg {
+    .lg-pre-wrap {
       white-space: pre-wrap;
     }
+  }
+
+  .custom-button {
+    border: 2px solid #ffc700;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #575757;
+    padding: 0.5rem 2rem;
+    margin: 0.25rem;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .custom-button:hover {
+    scale: 1.1;
+    background-color: #ffc700;
+    color: black;
+    border-color: white;
   }
 }

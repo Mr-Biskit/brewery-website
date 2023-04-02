@@ -14,18 +14,46 @@ function Header() {
   return (
     <header className="w-full  bg-black sticky top-0 z-30 ">
       <div className="flex justify-between">
-        <div className="mx-2 mt-4 p-2">
+        <div className="mx-2 lg:my-2 lg:p-1 mt-4 p-2">
           <Link href={"/"}>
-            <Image
-              alt="logo"
-              src="/images/logoName.png"
-              width={150}
-              height={200}
-              className=""
-            />
+            <div className="w-[150px] h-[50px] lg:w-[200px] lg:h-[60px] relative">
+              <Image alt="logo" src="/images/logoName.png" fill />
+            </div>
           </Link>
         </div>
-        <div className="mx-3 p-2 my-3 items-center justify-center ">
+        <div className="hidden lg:flex space-x-4 items-center p-2">
+          <Link href="/#OurStory">
+            <h3 className="text-[#f2f2f2] font-std font-normal tracking-wider text-md  cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300 ">
+              OUR STORY
+            </h3>
+          </Link>
+          <Link href="/#Menu">
+            <h3 className="text-white font-std font-normal tracking-wider text-md cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              MENU
+            </h3>
+          </Link>
+          <Link href="/beerMenu">
+            <h3 className="text-white font-std font-normal tracking-wider text-md cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              ON TAP
+            </h3>
+          </Link>
+          <Link href="/#Sports">
+            <h3 className="text-white font-std font-normal tracking-wider text-md cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              SPORT
+            </h3>
+          </Link>
+          <Link href="/contact">
+            <h3 className="text-white font-std font-normal tracking-wider text-md  cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              CONTACT
+            </h3>
+          </Link>
+          <Link href={"/reservations"}>
+            <div className="rounded-md  px-3 py-1 mr-2 custom-button">
+              <span className=" text-3xl font-heading">ReSeRvAtIoN</span>
+            </div>
+          </Link>
+        </div>
+        <div className="mx-3 p-2 my-3 items-center justify-center lg:hidden">
           <Hamburger
             toggled={isOpen}
             onToggle={() => setOpen(!isOpen)}
@@ -36,32 +64,59 @@ function Header() {
         </div>
       </div>
       {isOpen && (
-        <div className="flex flex-col justify-center items-center bg-gradient-to-b from-black via-primary to-secondary w-screen h-[844px] relative z-20 ">
-          <Link href={"#OurStory"} onClick={handleLinkClick}>
-            <h3 className="text-[#f2f2f2] font-std font-normal tracking-wider text-xl mt-2 ">
-              OUR STORY
-            </h3>
-          </Link>
-          <Link href={"#Menu"} onClick={handleLinkClick}>
-            <h3 className="text-white font-std font-normal tracking-wider text-xl">
-              MENU
-            </h3>
-          </Link>
-          <Link href={"/contact"} onClick={handleLinkClick}>
-            <h3 className="text-white font-std font-normal tracking-wider text-xl">
-              ON TAP
-            </h3>
-          </Link>
-          <Link href={"#Sports"} onClick={handleLinkClick}>
-            <h3 className="text-white font-std font-normal tracking-wider text-xl">
-              SPORT
-            </h3>
-          </Link>
-          <Link href={"/contact"} onClick={handleLinkClick}>
-            <h3 className="text-white font-std font-normal tracking-wider text-xl mb-2">
-              CONTACT
-            </h3>
-          </Link>
+        <div className="flex flex-col items-center mt-10 md:mt-40 bg-gradient-to-b from-black via-primary to-secondary w-screen h-screen relative z-20 ">
+          <div className="flex flex-col justify-center items-center  space-y-12 p-6 md:p-20 md:space-y-20 ">
+            <Link
+              href={"/#OurStory"}
+              onClick={handleLinkClick}
+              className="border-b-2 border-white"
+            >
+              <h3 className="text-[#f2f2f2] font-bebas tracking-widest text-2xl mt-2 ">
+                OUR STORY
+              </h3>
+            </Link>
+            <Link
+              href={"/#Menu"}
+              onClick={handleLinkClick}
+              className="border-b-2 border-white"
+            >
+              <h3 className="text-white font-bebas tracking-widest text-2xl mt-2 ">
+                MENU
+              </h3>
+            </Link>
+            <Link
+              href={"/beerMenu"}
+              onClick={handleLinkClick}
+              className="border-b-2 border-white"
+            >
+              <h3 className="text-white font-bebas tracking-widest text-2xl mt-2 ">
+                ON TAP
+              </h3>
+            </Link>
+            <Link
+              href={"#Sports"}
+              onClick={handleLinkClick}
+              className="border-b-2 border-white"
+            >
+              <h3 className="text-white font-bebas tracking-widest text-2xl mt-2 ">
+                SPORT
+              </h3>
+            </Link>
+            <Link
+              href={"/contact"}
+              onClick={handleLinkClick}
+              className="border-b-2 border-white"
+            >
+              <h3 className="text-white font-bebas tracking-widest text-2xl mt-2 ">
+                CONTACT
+              </h3>
+            </Link>
+            <Link href={"/#OurStory"} onClick={handleLinkClick}>
+              <div className="rounded-md bg-[#575757] px-8 py-2 m-1 text-white inline-flex items-center border-2 border-[#FFC700] hover:scale-110 transform duration-300 cursor-pointer">
+                <span className=" text-3xl font-heading">ReSerVaTions</span>
+              </div>
+            </Link>
+          </div>
         </div>
       )}
     </header>
