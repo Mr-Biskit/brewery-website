@@ -38,25 +38,27 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ menuCategory }) => {
   }, [router.query]);
   return (
     <div className="bg-primary w-screen flex flex-col  justify-center items-center ">
-      <h1 className="text-6xl text-white my-2 mx-2 mt-16 font-heading md:text-9xl">
+      <h1 className="text-6xl text-white my-2 mx-2 mt-16 font-heading lg:text-9xl">
         Food MeNu
       </h1>
-      <div className="w-screen flex flex-col md:flex-row justify-center items-center md:items-start md:relative md:justify-self-auto">
-        <div className="w-screen md:w-1/2 md:absolute md:left-0">
-          <ul className="grid grid-cols-2 md:grid-cols-1 gap-x-2 gap-y-6 justify-items-center my-6 p-1 rounded-md w-screen md:1/2">
+      <div className="w-screen flex-col lg:flex">
+        <div className="w-screen lg:fixed lg:left-0 lg:right-0 lg:w-1/3">
+          <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-2 gap-y-4 justify-items-center my-6 p-1 rounded-md w-screen lg:w-auto">
             {menuCategory.map((category) => (
-              <li className="bg-secondary md:p-6 border-[0.5px] px-2 md:border text-center border-white text-2xl md:text-4xl text-white mx-2 font-heading w-[177px] h-[36.31px]">
-                <button
-                  className="cursor-pointer"
-                  onClick={() => handleClick(category.category)}
+              <li>
+                <div
+                  className="custom-button rounded-none"
+                  onClick={() => handleClick}
                 >
-                  {category.category}
-                </button>
+                  <span className=" text-xl lg:text-4xl font-heading">
+                    {category.category}
+                  </span>
+                </div>
               </li>
             ))}
           </ul>
         </div>
-        <div className="w-screen flew flex-col justify-center items-center md:w-1/2 ">
+        <div className="w-screen flew flex-col justify-center items-center lg:w-2/3 lg:items-end ">
           {menuCategory.map((category) => (
             <section id={category.category}>
               <div className="w-screen h-[96px]" />
@@ -68,7 +70,7 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ menuCategory }) => {
                   {category.menuItems.map((item) => (
                     <li className=" p-2 text-left border-white text-white mx-2 font-heading ">
                       <header className="flex ">
-                        <h3 className="text-xl text-white font-heading md:text-2xl ">
+                        <h3 className="text-xl text-white font-bebas md:text-2xl ">
                           {item.heading}
                         </h3>
                       </header>

@@ -5,10 +5,10 @@ import Footer from "../components/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="bg-primary">
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
   );
 }

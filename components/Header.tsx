@@ -12,7 +12,7 @@ function Header() {
   }
 
   return (
-    <header className="w-full  bg-black sticky top-0 z-30 ">
+    <header className="w-full lg:bg-black/40 bg-black sticky top-0 z-30 ">
       <div className="flex justify-between">
         <div className="mx-2 lg:my-2 lg:p-1 mt-4 p-2">
           <Link href={"/"}>
@@ -27,7 +27,7 @@ function Header() {
               OUR STORY
             </h3>
           </Link>
-          <Link href="/#Menu">
+          <Link href="/foodCategory">
             <h3 className="text-white font-std font-normal tracking-wider text-md cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
               MENU
             </h3>
@@ -37,14 +37,14 @@ function Header() {
               ON TAP
             </h3>
           </Link>
-          <Link href="/#Sports">
-            <h3 className="text-white font-std font-normal tracking-wider text-md cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
-              SPORT
-            </h3>
-          </Link>
-          <Link href="/contact">
+          <Link href="/#Contact">
             <h3 className="text-white font-std font-normal tracking-wider text-md  cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
               CONTACT
+            </h3>
+          </Link>
+          <Link href="/blog">
+            <h3 className="text-white font-std font-normal tracking-wider text-md cursor-pointer transform hover:scale-110 opacity-50 hover:opacity-100 transition-opacity duration-300">
+              BLOG
             </h3>
           </Link>
           <Link href={"/reservations"}>
@@ -76,7 +76,7 @@ function Header() {
               </h3>
             </Link>
             <Link
-              href={"/#Menu"}
+              href={"/foodCategory"}
               onClick={handleLinkClick}
               className="border-b-2 border-white"
             >
@@ -94,16 +94,7 @@ function Header() {
               </h3>
             </Link>
             <Link
-              href={"#Sports"}
-              onClick={handleLinkClick}
-              className="border-b-2 border-white"
-            >
-              <h3 className="text-white font-bebas tracking-widest text-2xl mt-2 ">
-                SPORT
-              </h3>
-            </Link>
-            <Link
-              href={"/contact"}
+              href={"/#Contact"}
               onClick={handleLinkClick}
               className="border-b-2 border-white"
             >
@@ -111,7 +102,16 @@ function Header() {
                 CONTACT
               </h3>
             </Link>
-            <Link href={"/#OurStory"} onClick={handleLinkClick}>
+            <Link
+              href={"/blog"}
+              onClick={handleLinkClick}
+              className="border-b-2 border-white"
+            >
+              <h3 className="text-white font-bebas tracking-widest text-2xl mt-2 ">
+                BLOG
+              </h3>
+            </Link>
+            <Link href={"/reservations"} onClick={handleLinkClick}>
               <div className="rounded-md bg-[#575757] px-8 py-2 m-1 text-white inline-flex items-center border-2 border-[#FFC700] hover:scale-110 transform duration-300 cursor-pointer">
                 <span className=" text-3xl font-heading">ReSerVaTions</span>
               </div>

@@ -18,8 +18,8 @@ const FoodCategory: React.FC<FoodMenuProps> = ({ menuCategory }) => {
         <h1 className="text-6xl text-white my-2 mx-2 mb-10 mt-16 font-heading md:text-9xl">
           Food MeNu
         </h1>
-        <div className="flex flex-col justify-center items-center bg-secondary rounded-md w-[360px] border md:p-4 border-white">
-          <h2 className="text-2xl md:text-4xl text-white mx-2 font-heading">
+        <div className="custom-button">
+          <h2 className="text-2xl md:text-4xl mx-2 font-heading">
             DownLoad Menu
           </h2>
         </div>
@@ -28,7 +28,7 @@ const FoodCategory: React.FC<FoodMenuProps> = ({ menuCategory }) => {
           {menuCategory.map((category) => (
             <li
               key={category.category}
-              className="flex flex-col items-center relative h-[190px] w-[167px] md:h-[390px] md:w-[389px]"
+              className="flex flex-col items-center relative h-[190px] w-[167px] lg:h-[390px] lg:w-[389px] transform hover:scale-110 transition-transform duration-300"
             >
               <Link
                 href={{
@@ -42,11 +42,13 @@ const FoodCategory: React.FC<FoodMenuProps> = ({ menuCategory }) => {
                   alt={category.category}
                   width={167}
                   height={167}
-                  className="h-[167px] w-[167px] md:h-[357px] md:w-[357px] object-cover rounded-sm"
+                  className="h-[167px] w-[167px] lg:h-[357px] lg:w-[357px] object-cover rounded-sm"
                 />
-                <span className="absolute bottom-0 bg-secondary p-2 md:p-6 border-[0.5px] md:border border-white text-2xl md:text-4xl text-white mx-2 font-heading">
-                  {category.category}
-                </span>
+                <div className="absolute bottom-0 custom-button rounded-none">
+                  <span className=" text-xl lg:text-4xl font-heading">
+                    {category.category}
+                  </span>
+                </div>
               </Link>
             </li>
           ))}
