@@ -39,15 +39,6 @@ export interface Span {
   text: string;
 }
 
-// Interface for the Block
-export interface Block {
-  _key: string;
-  _type: string;
-  children: Span[];
-  markDefs: any[];
-  style: string;
-}
-
 // Interface for the OurStory
 export interface OurStory extends Base {
   openingTimes: OpeningTimes;
@@ -88,4 +79,44 @@ export interface Beer extends Base {
   secondImage: Image;
   title: string;
   type: string;
+}
+
+// Interface For Blog Posts
+export interface Post extends Base {
+  author: Author;
+  categories: Category[];
+  mainImage: Image;
+  slug: Slug;
+  title: string;
+  description: string;
+}
+
+interface Author extends Base {
+  bio: Block[];
+  image: Image;
+  name: string;
+  slug: Slug;
+}
+
+interface Reference {
+  _ref: string;
+  _type: "reference";
+}
+
+interface Slug {
+  _type: "slug";
+  current: string;
+}
+
+interface Block {
+  _key: string;
+  _type: "block";
+  children: Span[];
+  markDefs: any[];
+  style: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
+}
+
+interface Category extends Base {
+  title: string;
+  description: string;
 }

@@ -1,21 +1,20 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "sports",
-  title: "Sports",
+  name: "events",
+  title: "Event Page",
   type: "document",
   fields: [
     defineField({
-      name: "firstParagraph",
-      title: "First Paragraph",
+      name: "subHeading",
+      title: "Sub Heading",
       type: "string",
     }),
     defineField({
-      name: "secondParagraph",
-      title: "Second Paragraph",
+      name: "paragraphs",
+      title: "Paragraphs",
       type: "string",
     }),
-
     defineField({
       name: "imageGallery",
       title: "Image Gallery",

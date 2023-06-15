@@ -8,7 +8,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className="bg-primary">
       <Header />
       <Component {...pageProps} />
-      <Footer />
     </div>
   );
 }

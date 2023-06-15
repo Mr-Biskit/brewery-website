@@ -80,15 +80,6 @@ function Sports() {
           friendly atmosphere.
         </p>
       </div>
-      <div className="flex flex-col justify-center items-center w-screen my-10">
-        <Link href={"/"}>
-          <div className="custom-button mx-4  mb-16 lg:border-4">
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl">
-              VieW SpoRt SchEduLe
-            </h1>
-          </div>
-        </Link>
-      </div>
     </div>
   );
 }
