@@ -25,3 +25,7 @@ For confidentiality reasons, I cannot share the code of the booking system that 
 ## Project Execution
 
 The application is designed with an emphasis on high-speed performance. This has been achieved by leveraging server-side rendering through Next.js, enabling fast load times and a seamless user experience.
+
+## Closing Note
+
+I take pride in my work and hope this Restaurant App project reflects my dedication and skills in web development. Whether you're here to inspect the code or gain inspiration, I hope this repository serves your needs.
