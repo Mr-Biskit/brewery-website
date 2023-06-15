@@ -204,8 +204,11 @@ const BeerMenu: React.FC<BeerProps> = ({ beers }) => {
                   </h3>
                 </div>
                 <div className="flex flex-wrap w-full justify-center items-center ml-2">
-                  {selectedBeer.hops.map((hop) => (
-                    <div className="rounded-lg bg-[#575757] px-2 py-1 m-1 text-white inline-flex items-center border border-[#FFC700]">
+                  {selectedBeer.hops.map((hop, index) => (
+                    <div
+                      className="rounded-lg bg-[#575757] px-2 py-1 m-1 text-white inline-flex items-center border border-[#FFC700]"
+                      key={index}
+                    >
                       <span className="ml-1 text-sm">{hop}</span>
                     </div>
                   ))}
@@ -224,8 +227,11 @@ const BeerMenu: React.FC<BeerProps> = ({ beers }) => {
                   </h3>
                 </div>
                 <div className="flex flex-wrap w-full justify-center items-center ml-2">
-                  {selectedBeer.malts.map((malt) => (
-                    <div className="rounded-lg bg-[#575757] px-1 py-1 m-1 text-white inline-flex items-center border border-[#FFC700]">
+                  {selectedBeer.malts.map((malt, index) => (
+                    <div
+                      className="rounded-lg bg-[#575757] px-1 py-1 m-1 text-white inline-flex items-center border border-[#FFC700]"
+                      key={index}
+                    >
                       <span className="ml-1 text-sm">{malt}</span>
                     </div>
                   ))}

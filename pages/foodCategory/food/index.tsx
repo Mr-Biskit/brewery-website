@@ -44,8 +44,8 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ menuCategory }) => {
       <div className="w-screen flex-col lg:flex">
         <div className="w-screen lg:fixed lg:left-0 lg:right-0 lg:w-1/3">
           <ul className="grid grid-cols-2 lg:grid-cols-1 gap-x-2 gap-y-4 justify-items-center my-6 p-1 rounded-md w-screen lg:w-auto">
-            {menuCategory.map((category) => (
-              <li>
+            {menuCategory.map((category, key) => (
+              <li key={key}>
                 <div
                   className="custom-button rounded-none"
                   onClick={() => handleClick}
@@ -59,16 +59,19 @@ const FoodMenu: React.FC<FoodMenuProps> = ({ menuCategory }) => {
           </ul>
         </div>
         <div className="w-screen flew flex-col justify-center items-center lg:w-2/3 lg:items-end ">
-          {menuCategory.map((category) => (
-            <section id={category.category}>
+          {menuCategory.map((category, index) => (
+            <section id={category.category} key={index}>
               <div className="w-screen h-[96px]" />
               <div className="flex flex-col justify-center items-center mx-2 p-2">
                 <h2 className="text-3xl text-white my-2 mx-2 mt-8 font-heading md:text-4xl text-right">
                   {category.category}
                 </h2>
                 <ul className=" justify-items-center my-2 p-1 rounded-md w-screen">
-                  {category.menuItems.map((item) => (
-                    <li className=" p-2 text-left border-white text-white mx-2 font-heading ">
+                  {category.menuItems.map((item, key) => (
+                    <li
+                      className=" p-2 text-left border-white text-white mx-2 font-heading"
+                      key={key}
+                    >
                       <header className="flex ">
                         <h3 className="text-xl text-white font-bebas md:text-2xl ">
                           {item.heading}

@@ -106,8 +106,13 @@ const Gallery = () => {
                 currentSet * postsPerSet,
                 currentSet * postsPerSet + postsPerSet
               )
-              .map((post) => (
-                <Link href={post.permalink} target="_blank" rel="noreferrer">
+              .map((post, key) => (
+                <Link
+                  href={post.permalink}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={key}
+                >
                   <div className="relative w-full h-[220px] md:h-[250px] lg:h-[300px]">
                     <Image
                       src={

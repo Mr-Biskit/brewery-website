@@ -74,10 +74,10 @@ function Sports() {
           </motion.div>
         </div>
         <p className="text-white text-sm mx-4 my-3 font-std md:text-base lg:text-xl md:text-center">
-          Give us a call to see if we can show your game. We're passionate about
-          sports and we're always excited to share the experience with our
-          customers. Join us for a game and enjoy great food and drink in a fun,
-          friendly atmosphere.
+          Give us a call to see if we can show your game. We&apos;re passionate
+          about sports and we&apos;re always excited to share the experience
+          with our customers. Join us for a game and enjoy great food and drink
+          in a fun, friendly atmosphere.
         </p>
       </div>
     </div>

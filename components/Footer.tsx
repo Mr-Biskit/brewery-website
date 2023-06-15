@@ -1,5 +1,6 @@
 // components/Footer.tsx
 import React from "react";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
@@ -13,19 +14,19 @@ const Footer: React.FC = () => {
           <nav>
             <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
               <li>
-                <a href="/" className="text-sm font-semibold">
+                <Link href="/" className="text-sm font-semibold">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-sm font-semibold">
+                <Link href="/about" className="text-sm font-semibold">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="text-sm font-semibold">
+                <Link href="/contact" className="text-sm font-semibold">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
