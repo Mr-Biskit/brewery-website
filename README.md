@@ -10,16 +10,17 @@ The app is fully integrated with a Content Management System (CMS) through Sanit
 For confidentiality reasons, I cannot share the code of the booking system that I integrated. However, I can assure you that it was developed keeping in mind the ease of use for both the restaurant staff and the customers.
 
 ## Technologies Used
-React: This JavaScript library was used for building the user interface.
-Next.js: This React framework was used to enable server-side rendering for improved performance and SEO.
-Instagram API: This was used for integrating Instagram feeds directly into the website.
-Figma: This was used for prototyping the design of the application.
-Framer Motion: This was used for creating animations and transitions.
-TypeScript: This was used to develop the application, providing a typed superset of JavaScript that resulted in more robust and maintainable code.
-Sanity.io: This was used as the back-end for the application, providing a CMS that can be directly embedded in the website.
-Tailwind CSS: This was used for styling the application, allowing for highly customized design with minimal CSS.
-Intersection Observer: This was used for creating smooth and efficient scrolling experiences, particularly for the parallax effects.
-Project Execution
+- React: This JavaScript library was used for building the user interface.
+- Next.js: This React framework was used to enable server-side rendering for improved performance and SEO.
+- Instagram API: This was used for integrating Instagram feeds directly into the website.
+- Figma: This was used for prototyping the design of the application.
+- Framer Motion: This was used for creating animations and transitions.
+- TypeScript: This was used to develop the application, providing a typed superset of JavaScript that resulted in more robust and maintainable code.
+- Sanity.io: This was used as the back-end for the application, providing a CMS that can be directly embedded in the website.
+- Tailwind CSS: This was used for styling the application, allowing for highly customized design with minimal CSS.
+- Intersection Observer: This was used for creating smooth and efficient scrolling experiences, particularly for the parallax effects.
+
+## Project Execution
 The application is designed with an emphasis on high-speed performance. This has been achieved by leveraging server-side rendering through Next.js, enabling fast load times and a seamless user experience.
 
 ## Closing Note
