@@ -1,38 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Restaurant App Project
 
-## Getting Started
+Welcome to the README of my Restaurant App project. This repository represents a stripped-down version of the live project I delivered to a client. This Restaurant App showcases my unique design approach and technical skills, with the aim of presenting an engaging and user-friendly interface for restaurant customers.
 
-First, run the development server:
+## Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The application was designed with a strong focus on responsiveness and includes various animations and parallax effects to provide a modern and engaging user experience. A unique feature of this app is the interactive beer menu that showcases the different beers on tap, enhancing the browsing experience for the users.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app is fully integrated with a Content Management System (CMS) through Sanity.io, which provides Google Authentication access. This CMS integration allows for easy updates of all parts of the website, including images, text, menus, and beers, making it incredibly user-friendly for the restaurant owners. They can keep the website updated without ever having to touch a line of code.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+For confidentiality reasons, I cannot share the code of the booking system that I integrated. However, I can assure you that it was developed keeping in mind the ease of use for both the restaurant staff and the customers.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Technologies Used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- React: This JavaScript library was used for building the user interface.
+- Next.js: This React framework was used to enable server-side rendering for improved performance and SEO.
+- Instagram API: This was used for integrating Instagram feeds directly into the website.
+- Figma: This was used for prototyping the design of the application.
+- Framer Motion: This was used for creating animations and transitions.
+- TypeScript: This was used to develop the application, providing a typed superset of JavaScript that resulted in more robust and maintainable code.
+- Sanity.io: This was used as the back-end for the application, providing a CMS that can be directly embedded in the website.
+- Tailwind CSS: This was used for styling the application, allowing for highly customized design with minimal CSS.
+- Intersection Observer: This was used for creating smooth and efficient scrolling experiences, particularly for the parallax effects.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Execution
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The application is designed with an emphasis on high-speed performance. This has been achieved by leveraging server-side rendering through Next.js, enabling fast load times and a seamless user experience.
