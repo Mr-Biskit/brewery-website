@@ -17,7 +17,7 @@ function Header() {
         <div className="mx-2 lg:my-2 lg:p-1 mt-4 p-2">
           <Link href={"/"}>
             <div className="w-[150px] h-[50px] lg:w-[200px] lg:h-[60px] relative">
-              <Image alt="logo" src="/images/logoName.png" fill />
+              <Image alt="logo" src="/Images/logoName.png" fill />
             </div>
           </Link>
         </div>

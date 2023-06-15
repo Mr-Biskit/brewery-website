@@ -13,7 +13,7 @@ function Menu() {
         <Link href="/foodCategory" className="lg:w-full">
           <div className="justify-center items-center h-[300px] flex w-screen relative z-10  lg:border-2 lg:border-white lg:rounded-lg lg:w-full lg:h-80 ">
             <Image
-              src="/images/food1.jpeg"
+              src="/Images/food1.jpeg"
               alt="menu"
               fill
               className=" opacity-60 hover:opacity-80 "
@@ -26,7 +26,7 @@ function Menu() {
         <Link href="/beerMenu" className="w-full">
           <div className="justify-center h-[300px] items-center flex w-screen relative z-10 cursor-pointer  lg:border-2 lg:border-white lg:rounded-lg lg:w-full lg:h-80 xl:w-120 xl:h-100">
             <Image
-              src="/images/beer6.jpeg"
+              src="/Images/beer6.jpeg"
               alt="menu"
               fill
               className="  opacity-60 hover:opacity-80 "
